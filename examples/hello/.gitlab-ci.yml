@@ -1,0 +1,6 @@
+stages: [test]
+
+hello:
+  stage: test
+  script:
+    - echo "Hello from GitLab Runner!"
