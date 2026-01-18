@@ -1,0 +1,22 @@
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    hostname: localhost
+    restart: unless-stopped
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://localhost:8929'
+    ports:
+      - "8929:8929"
+      - "2224:22"
+    volumes:
+      - ../../.runner/gitlab/config:/etc/gitlab
+      - ../../.runner/gitlab/logs:/var/log/gitlab
+      - ../../.runner/gitlab/data:/var/opt/gitlab
+
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    restart: unless-stopped
+    volumes:
+      - ../../.runner/config:/etc/gitlab-runner
+      - ../../.runner/cache:/cache

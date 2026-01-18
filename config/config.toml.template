@@ -1,0 +1,9 @@
+# This is only a template. In most cases, `gitlab-runner register` will create the real config:
+#   ~/.gitlab-runner/config.toml (mac/linux)
+#   %USERPROFILE%\.gitlab-runner\config.toml (windows)
+
+concurrent = 2
+check_interval = 0
+
+[session_server]
+  session_timeout = 1800

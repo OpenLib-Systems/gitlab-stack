@@ -1,18 +1,17 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Local runner state
+.runner/
+!.runner/.gitkeep
 
-# Other files and folders
-.settings/
+# Local user-space state folders (if created inside repo by accident)
+.local/
+.state/
+.cache/
+.env/
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
+# Logs / pids
+*.log
+*.pid
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# OS junk
+.DS_Store
+Thumbs.db

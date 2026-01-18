@@ -1,0 +1,10 @@
+services:
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: gitlab-runner
+    restart: unless-stopped
+    volumes:
+      - ../../.runner/config:/etc/gitlab-runner
+      - ../../.runner/cache:/cache
+      # Optional (DANGEROUS): enable docker executor on host Docker:
+      # - /var/run/docker.sock:/var/run/docker.sock
