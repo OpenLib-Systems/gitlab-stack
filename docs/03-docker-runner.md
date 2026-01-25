@@ -24,7 +24,9 @@
 ```
 
 ```bash
-.\setup.ps1 -Mode Docker -Action Register `
+.\setup.ps1
+  -Mode Docker
+  -Action Register `
   -Url https://gitlab.com `
   -Token glrt-... `
   -Name docker-runner `

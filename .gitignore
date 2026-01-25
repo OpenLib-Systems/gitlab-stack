@@ -6,7 +6,7 @@
 .local/
 .state/
 .cache/
-.env/
+.env
 
 # Logs / pids
 *.log
